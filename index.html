@@ -20,11 +20,20 @@
                     </li>
                 </ul>
             </div>
+            <div v-else>
+                <ul>
+                    <li @click="toggleFav(book)" v-for="book in books" :class="{ fav: book.isFav }">
+                        <img :src="book.img" :alt="book.title">
+                        <h3>{{ book.title }}</h3>
+                        <p>{{ book.author}}</p>
+                    </li>
+                </ul>
+            </div>
 
 
 			<button @click="toggleShowBooks">
-                <span v-if="showBooks">Hide Books</span>
-                <span v-else>Show Books</span>
+                <span v-if="showBooks">All Books</span>
+                <span v-else>Filter Books</span>
             </button>
 
 		</div>
