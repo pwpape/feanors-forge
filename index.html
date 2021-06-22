@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Feanor's Forge</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://unpkg.com/vue@next"></script>
+	</head>
+	<body>
+        <h1>Hello, Vue:)</h1>
+		<div id="app">
+			
+            <div v-if="showBooks">
+                <ul>
+                    <li @click="toggleFav(book)" v-for="book in books" :class="{ fav: book.isFav }">
+                        <img :src="book.img" :alt="book.title">
+                        <h3>{{ book.title }}</h3>
+                        <p>{{ book.author}}</p>
+                    </li>
+                </ul>
+            </div>
+
+
+			<button @click="toggleShowBooks">
+                <span v-if="showBooks">Hide Books</span>
+                <span v-else>Show Books</span>
+            </button>
+
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
