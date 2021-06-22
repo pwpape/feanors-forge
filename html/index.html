@@ -8,14 +8,13 @@
 		<script src="https://unpkg.com/vue@next"></script>
 	</head>
 	<body>
-		<h1>Hello, Vue :)</h1>
 		<div id="app">
-			<p>{{ title }} - {{ author }}</p>
-			<p>{{ rings }} Rings of {{ race }}</p>
+			
+			<p>{{ name }}, son of {{ parent }}</p>
 
-			<button @click="increaseRings">Increase</button>
-			<button @click="decreaseRings">Decrease</button>
-			<button @click="changeRace">Elves</button>
+			<button @click="showFather">Father</button>
+			<button @click="showMother">Mother</button>
+
 		</div>
 		<script src="/Scripts/app.js"></script>
 	</body>

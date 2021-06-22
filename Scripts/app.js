@@ -1,21 +1,18 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: 'The Silmarillion',
-            author: 'J.R.R. Tolkien',
-            rings: 1,
-            race: 'Men'
+            name: 'Fëanor',
+            father: 'Finwë',
+            mother: 'Míriel Serindë',
+            parent: ''
         }
     },
     methods: {
-        increaseRings() {
-            this.rings++
+        showFather() {
+            this.parent = this.father
         },
-        decreaseRings() {
-            this.rings--
-        },
-        changeRace() {
-            this.race = 'Elves'
+        showMother() {
+            this.parent = this.mother
         }
     }
 })
